@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundimape"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/title_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="311dp"
+            android:layout_height="420dp"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="30sp"
+            android:background="#D8C2C4CC" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="350sp"
+            android:src="@drawable/ic_photo_camera_black_24dp" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="320sp"
+            android:layout_marginLeft="150sp"
+            android:text="Money"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380sp"
+            android:layout_marginLeft="200sp"
+            android:text="Send"
+            android:background="#FF2EA349"/>
+
+        <TextView
+            android:id="@+id/total_expenses"
+            android:layout_width="300sp"
+            android:layout_height="40sp"
+            android:background="#DFB1B2BA"
+            android:text="Total Expenses"
+            android:textSize="25dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="280sp"/>
+
+        <TextView
+            android:id="@+id/member_list"
+            android:layout_width="300sp"
+            android:layout_height="40sp"
+            android:background="#DFB1B2BA"
+            android:text="Member's list"
+            android:textSize="25dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="240sp" />
+
+        <Button
+            android:id="@+id/breakfast_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40  >"
+            android:textSize="25dp"
+            android:background="#003F51B5"
+            android:layout_marginTop="235sp"
+            android:layout_marginLeft="220sp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
