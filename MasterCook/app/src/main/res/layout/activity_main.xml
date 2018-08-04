@@ -11,12 +11,12 @@
 
     <TextView
         android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
         android:text="@string/title_home"
+        android:background="@color/colorPrimary"
+        android:textSize="25dp"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,10 +31,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
+    <ScrollView
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
 
         <TextView
@@ -42,7 +49,7 @@
             android:layout_width="311dp"
             android:layout_height="420dp"
             android:layout_marginLeft="25sp"
-            android:layout_marginTop="30sp"
+            android:layout_marginTop="100sp"
             android:background="#D8C2C4CC" />
 
         <ImageView
@@ -57,49 +64,61 @@
             android:id="@+id/money"
             android:layout_width="150sp"
             android:layout_height="40sp"
-            android:layout_marginTop="320sp"
-            android:layout_marginLeft="150sp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/total_expenses"
+            android:layout_marginStart="103dp"
             android:text="Money"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="380sp"
             android:layout_marginLeft="200sp"
-            android:text="Send"
-            android:background="#FF2EA349"/>
+            android:layout_marginTop="380sp"
+            android:background="#FF2EA349"
+            android:text="Send" />
 
         <TextView
             android:id="@+id/total_expenses"
             android:layout_width="300sp"
             android:layout_height="40sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="280sp"
             android:background="#DFB1B2BA"
             android:text="Total Expenses"
-            android:textSize="25dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="280sp"/>
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/member_list"
             android:layout_width="300sp"
             android:layout_height="40sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="240sp"
             android:background="#DFB1B2BA"
             android:text="Member's list"
-            android:textSize="25dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="240sp" />
+            android:textSize="25dp" />
 
         <Button
             android:id="@+id/breakfast_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40  >"
-            android:textSize="25dp"
-            android:background="#003F51B5"
+            android:layout_marginLeft="220sp"
             android:layout_marginTop="235sp"
-            android:layout_marginLeft="220sp"/>
+            android:background="#003F51B5"
+            android:text="40  >"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/money"
+            android:layout_marginEnd="62dp"
+            android:ems="10"
+            android:inputType="textPersonName"/>
     </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
